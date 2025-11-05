@@ -51,35 +51,6 @@ npm run storybook
 npm run build-storybook
 ```
 
-## 📦 Available Components
-
-### Core Components
-
-- **Avatar** - User avatars with images or initials
-  - Circular design with gradient background
-  - Supports images and text content
-  - Hover animations
-
-- **Block** - Card container for content
-  - Flexbox layout with image support
-  - Box shadow and hover effects
-  - Perfect for product cards
-
-- **Header** - Page header and navigation
-  - Responsive layout
-  - Supports logos and navigation
-  - Border and shadow styling
-
-- **Dataline** - Data display component
-  - Icon prefix
-  - Left border accent
-  - Gray background
-
-- **Icon** - SVG icon component
-  - Multiple sizes (sm, md, lg, xl)
-  - Figma SVG assets
-  - Color customization
-
 ## 🎨 Figma Integration
 
 ### Setup
