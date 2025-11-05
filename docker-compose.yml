@@ -1,0 +1,17 @@
+services:
+  storybook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: storybook-urban-heroes
+    ports:
+      - "6006:6006"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    command: npm run storybook -- --no-open
+    stdin_open: true
+    tty: true
