@@ -101,75 +101,6 @@ src/
         └── *.svg                    # Exported SVG icons
 ```
 
-## 🎯 Using Components
-
-### Basic Usage
-
-```jsx
-import { Avatar, Block, Header, Icon } from './components';
-
-// Avatar with initials
-<Avatar>JD</Avatar>
-
-// Avatar with image
-<Avatar imageSrc="https://i.pravatar.cc/150">JD</Avatar>
-
-// Block/Card with content
-<Block imageSrc="https://via.placeholder.com/300x200">
-  <h3>Product Name</h3>
-  <p>Description</p>
-</Block>
-
-// Header with navigation
-<Header>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-  </nav>
-</Header>
-
-// Icon
-<Icon name="bell" size="md" />
-```
-
-### With Custom Styling
-
-```jsx
-// Add custom classes
-<Avatar className="avatar--large">XL</Avatar>
-
-// Inline styles
-<Block style={{ maxWidth: '400px' }}>
-  Content
-</Block>
-```
-
-## 🎨 Styling
-
-### Design Tokens
-
-All components use CSS custom properties from `_variables.scss`:
-
-```scss
-// Spacing
---spacing-xs: 0.25rem;
---spacing-sm: 0.5rem;
---spacing-md: 1rem;
---spacing-lg: 1.5rem;
---spacing-xl: 2rem;
-
-// Typography
---font-family: sans-serif;
---font-size-sm: 0.875rem;
---font-size-md: 1rem;
---font-size-lg: 1.25rem;
-
-// Colors
---color-primary: #007bff;
---color-success: #28a745;
---color-danger: #dc3545;
-```
-
 ### Customizing Components
 
 Edit component SCSS files:
@@ -188,36 +119,6 @@ Edit component SCSS files:
     height: 100px;
   }
 }
-```
-
-## 📂 Project Structure
-
-```
-.
-├── .storybook/              # Storybook configuration
-│   ├── main.js              # Main config
-│   ├── preview.js           # Preview config
-│   └── preview-styles.scss  # Global styles
-├── scripts/
-│   └── fetch-figma.js       # Figma automation script
-├── src/
-│   ├── components/          # React components
-│   │   ├── _variables.scss  # Design tokens
-│   │   ├── Avatar/
-│   │   ├── Block/
-│   │   ├── Header/
-│   │   ├── Dataline/
-│   │   └── Icon/
-│   ├── stories/             # Documentation
-│   │   ├── Introduction.stories.jsx
-│   │   └── Welcome.stories.js
-│   ├── styles/              # Global styles
-│   │   └── _tokens.scss
-│   └── assets/              # Static assets
-│       └── figma/           # Figma exports
-├── docker-compose.yml
-├── Dockerfile
-└── package.json
 ```
 
 ## 🛠️ Tech Stack
