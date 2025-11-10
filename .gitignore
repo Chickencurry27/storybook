@@ -10,10 +10,10 @@ yarn-error.log*
 # Build
 storybook-static
 dist
-/src/components/*
-/src/assets/*
-/src/styles/*
-/src/stories/*
+
+# Generated from Figma
+/src/
+/twig-templates/
 
 # OS
 .DS_Store

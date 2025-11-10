@@ -1,17 +1,15 @@
 services:
   storybook:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: storybook-urban-heroes
+    build: .
+    container_name: storybook_figma
     ports:
       - "6006:6006"
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     environment:
-      - NODE_ENV=development
-      - CHOKIDAR_USEPOLLING=true
-    command: npm run storybook -- --no-open
-    stdin_open: true
-    tty: true
+      FIGMA_TOKEN: ${FIGMA_TOKEN}
+      FIGMA_FILE_KEY: ${FIGMA_FILE_KEY}
+      CHOKIDAR_USEPOLLING: "true"
+      BROWSER: "none"
+    command: npm run storybook
