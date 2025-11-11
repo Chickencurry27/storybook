@@ -24,14 +24,3 @@ body {
   background: #ffffff;
   padding: 2rem;
 }
-
-// Make components visible with better default styles
-[class*="avatar"],
-[class*="block"],
-[class*="header"],
-[class*="dataline"],
-[class*="depth"] {
-  display: inline-block;
-  min-width: 100px;
-  min-height: 40px;
-}

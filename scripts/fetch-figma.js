@@ -814,6 +814,14 @@ function extractChildElements(node, elements = [], depth = 0) {
     element.layoutMode = node.layoutMode;
   }
 
+  if (node.primaryAxisAlignItems) {
+    element.primaryAxisAlignItems = node.primaryAxisAlignItems;
+  }
+
+  if (node.counterAxisAlignItems) {
+    element.counterAxisAlignItems = node.counterAxisAlignItems;
+  }
+
   if (node.itemSpacing !== undefined) {
     element.gap = node.itemSpacing;
   }
@@ -1045,6 +1053,36 @@ function generateChildScss(elements, componentClass, scssLines = [], index = 1, 
     if (el.layoutMode) {
       scss += `\n    display: flex;`;
       scss += `\n    flex-direction: ${el.layoutMode === 'HORIZONTAL' ? 'row' : 'column'};`;
+
+      // Add alignment for icon/image containers
+      if (el.type === 'FRAME' || el.type === 'GROUP') {
+        // Check if primary axis alignment is set
+        if (el.primaryAxisAlignItems) {
+          const alignMap = {
+            'MIN': 'flex-start',
+            'CENTER': 'center',
+            'MAX': 'flex-end',
+            'SPACE_BETWEEN': 'space-between',
+          };
+          const justifyContent = alignMap[el.primaryAxisAlignItems] || 'flex-start';
+          if (justifyContent === 'center') {
+            scss += `\n    justify-content: center;`;
+          }
+        }
+
+        // Check if counter axis alignment is set
+        if (el.counterAxisAlignItems) {
+          const alignMap = {
+            'MIN': 'flex-start',
+            'CENTER': 'center',
+            'MAX': 'flex-end',
+          };
+          const alignItems = alignMap[el.counterAxisAlignItems] || 'flex-start';
+          if (alignItems === 'center') {
+            scss += `\n    align-items: center;`;
+          }
+        }
+      }
     }
 
     if (el.gap !== undefined) {
