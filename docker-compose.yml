@@ -12,4 +12,4 @@ services:
       FIGMA_FILE_KEY: ${FIGMA_FILE_KEY}
       CHOKIDAR_USEPOLLING: "true"
       BROWSER: "none"
-    command: npm run storybook
+    command: sh -c "npm run fetch:figma && npm run jsx-to-twig && npm run storybook"
