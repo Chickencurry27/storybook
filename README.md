@@ -6,7 +6,8 @@ A modern design system built with **Storybook 10**, **React 18**, and **SCSS** r
 
 - 🎨 **React Components** - Modern functional components with hooks
 - 💅 **SCSS Styling** - Individual SCSS files per component with design tokens
-- 🎯 **Storybook 10** - Latest version with Vite 6 for blazing fast development
+- 🎯 **Storybook 10** - Latest version with Vite 7 for blazing fast development
+- ♿ **A11y Testing** - WCAG accessibility testing with @storybook/addon-a11y
 - 🎭 **Multiple Variants** - Default, WithImage, and custom variants for each component
 - 🖼️ **Image Support** - All components support images with proper styling
 - 📦 **Figma Integration** - Automatic sync with Figma design files
@@ -124,11 +125,11 @@ Edit component SCSS files:
 ## 🛠️ Tech Stack
 
 - **Node.js**: v22.21.1 (Bookworm)
-- **React**: 18.3.1
-- **Storybook**: 10.0.5
-- **Build Tool**: Vite 6
+- **Storybook**: 10.0.7
+- **Build Tool**: Vite 7
 - **Styling**: SCSS/Sass
 - **API Integration**: Figma REST API (axios)
+- **Accessibility**: @storybook/addon-a11y for WCAG testing
 
 ## 📖 Story Variants
 
@@ -146,6 +147,12 @@ Each component includes multiple story variants:
 - Change text content
 - Add images with URLs
 - Toggle classes
+
+### Accessibility (a11y)
+- WCAG compliance testing
+- Color contrast checking
+- Keyboard navigation validation
+- Screen reader compatibility
 
 ### Backgrounds
 - Light (default)
@@ -247,4 +254,4 @@ MIT
 
 ---
 
-Built with ❤️ using Storybook 10.0.5, React 18, and SCSS
+Built with ❤️ using Storybook 10.0.7 and SCSS
